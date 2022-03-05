@@ -1,0 +1,99 @@
+\RequirePackage{fontspec}
+\RequirePackage{tikz}
+\RequirePackage{listings}
+
+\usefonttheme{serif}
+
+\newfontfamily\PlayfairDisplay{Playfair Display}
+\newfontfamily\Hack{Hack}
+
+\setmainfont{Playfair Display}
+\setmonofont{Hack}
+
+\lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
+
+% styles
+
+\setbeamercolor{palette primary}{fg=black,bg=white}
+\setbeamercolor{palette secondary}{fg=black,bg=white}
+\setbeamercolor{palette tertiary}{bg=black,fg=white}
+\setbeamercolor{palette quaternary}{fg=black,bg=white}
+\setbeamercolor{structure}{fg=black}
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{item}{fg=black}
+
+\setbeamerfont{block title}{size=\normalsize, series=\bfseries}
+\setbeamerfont{block body}{size=\small}
+\setbeamerfont{block body example}{size=\small}
+\setbeamerfont{block body alerted}{size=\small}
+
+\setbeamercolor{block title example}{fg=white,bg=blue!60}
+\setbeamercolor{block body example}{bg=blue!25}
+
+\setbeamercolor{block title alerted}{fg=white,bg=red!60}
+\setbeamercolor{block body alerted}{bg=red!25}
+
+% templates
+
+\setbeamertemplate{caption}[numbered]
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{blocks}[rounded]
+
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}[circle]
+
+\setbeamertemplate{title page}{
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[] at (current page.center){
+            \begin{minipage}{0.7\paperwidth}
+                \raggedright
+                {
+                    \usebeamercolor[fg]{title}{
+                        \bfseries{\huge\inserttitle\par}
+                    }
+                }
+                {
+                    \usebeamercolor[fg]{frametitle}{
+                        \vspace{4mm}
+                        \large\insertsubtitle\par
+                        \vspace{2mm}
+                        \small\insertauthor\par
+                        \vspace{1mm}
+                        \textnormal{\scriptsize\insertdate}\par
+                    }
+                }
+            \end{minipage}
+        };
+    \end{tikzpicture}
+}
+
+\setbeamertemplate{frametitle}{
+    \nointerlineskip
+    \vskip 2ex
+    \hskip -2ex
+    {
+        \usebeamercolor[fg]{frametitle}{
+            \textbf{\insertframetitle}
+        }
+    }
+}
+
+\setbeamertemplate{section in toc}{
+    \hskip2ex
+    \inserttocsectionnumber
+    \hskip2ex
+    {\usebeamercolor[fg]{normal text}\inserttocsection}%
+}
+
+\setbeamertemplate{footline}{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=4ex,dp=4ex]{section}
+  \hfill
+  \small
+  \insertframenumber
+  \hspace{2ex}
+  \end{beamercolorbox}
+}
