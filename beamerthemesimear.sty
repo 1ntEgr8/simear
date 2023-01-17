@@ -2,13 +2,20 @@
 \RequirePackage{tikz}
 \RequirePackage{listings}
 
-\usefonttheme{serif}
+\usefonttheme{professionalfonts}
 
-\newfontfamily\PlayfairDisplay{Playfair Display}
-\newfontfamily\Hack{Hack}
+\newfontfamily\Arial{Arial}
+\newfontfamily\CourierNew{CourierNew}
 
-\setmainfont{Playfair Display}
-\setmonofont{Hack}
+\setsansfont{Arial}
+\setmonofont{Courier New}
+
+\setbeamerfont{title page}{family=\Arial}
+\setbeamerfont{title page title}{size=\LARGE,series=\bfseries}
+\setbeamerfont{title page author}{size=\footnotesize}
+\setbeamerfont{title page institute}{size=\scriptsize}
+\setbeamerfont{frametitle}{family=\Arial,size=\large,series=\bfseries}
+\setbeamerfont{caption}{size=\footnotesize}
 
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
 
@@ -28,11 +35,11 @@
 \setbeamerfont{block body example}{size=\small}
 \setbeamerfont{block body alerted}{size=\small}
 
-\setbeamercolor{block title example}{fg=white,bg=blue!60}
-\setbeamercolor{block body example}{bg=blue!25}
+\setbeamercolor{block title example}{fg=black,bg=gray!60}
+\setbeamercolor{block body example}{bg=gray!25}
 
-\setbeamercolor{block title alerted}{fg=white,bg=red!60}
-\setbeamercolor{block body alerted}{bg=red!25}
+\setbeamercolor{block title alerted}{fg=black,bg=yellow!60}
+\setbeamercolor{block body alerted}{bg=yellow!25}
 
 % templates
 
@@ -73,7 +80,7 @@
 
 \setbeamertemplate{frametitle}{
     \nointerlineskip
-    \vskip 2ex
+    \vskip 4ex
     \hskip -2ex
     {
         \usebeamercolor[fg]{frametitle}{
